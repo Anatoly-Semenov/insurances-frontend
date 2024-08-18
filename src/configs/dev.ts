@@ -1,0 +1,21 @@
+export const devConfig = {
+	GO_LANDING: "",
+	UNLEASH_URL: "https://unleash-proxy.dev.test-url.io/proxy",
+	SECONDARY_FRONTEND_URL: "https://secondary.dev.test-url.io",
+	BASE_API_URL_SHORT: "https://testwww.test-url.ru",
+	BASE_API_URL: "https://testwww.test-url.ru/app",
+	OLD_FRONTEND_URL: "https://testwww.test-url.ru",
+	PORTAL_API_URL: "https://portal.test-url.ru",
+	EGRP_URL: "https://egrul.nalog.ru/index.html",
+	PREFFIX_MOTOR_ASSISTANT: "/motorAssistant",
+	CRM_URL: "https://test-crm.test-url.ru",
+	UNLEASH_APP_NAME: "insurances-frontend",
+	PREFFIX_DMSACCIDENT: "/dms-sogaz",
+	UNLEASH_ENVIRONMENT: "default",
+	PREFFIX_DMSSBS: "/Insurance-dms",
+	UNLEASH_CLIENT_KEY: "test",
+	PREFFIX_ASSET: "/asset",
+	PREFFIX_AGRO: "/agro",
+	PREFFIX_MITE: "/mite",
+	ENVIRONMENT: "dev"
+}

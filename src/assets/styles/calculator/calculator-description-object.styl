@@ -1,0 +1,44 @@
+.calculator-description-object
+	display flex
+	flex-direction column
+	width 100
+	position relative
+
+	&__img
+		max-width 33%
+		max-height 260px
+		user-select none
+		pointer-events none
+		position absolute
+		right -1px
+		top -87px
+
+	&__checkboxes
+		max-width 90%
+		display flex
+		flex-direction column
+		margin-top $gap-small
+
+		& .ui-alert
+			max-width 70%
+			margin 5px
+
+		&-radio
+			margin-top $gap
+
+		& .ui-checkbox
+			margin-left $gap-extra-small
+
+			&:not(:first-child)
+				padding-top $gap-small
+
+	&__fields
+		display flex
+		flex-wrap wrap
+		row-gap $gap-small
+		column-gap $gap-small
+		max-width 100%
+		margin-top 40px
+
+		& > .ui-select, & > .ui-input
+			max-width 48%

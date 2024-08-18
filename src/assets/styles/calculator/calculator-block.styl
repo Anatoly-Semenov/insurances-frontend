@@ -1,0 +1,97 @@
+.calculator__block
+	display flex
+	flex-direction column
+	padding $gap
+	border-radius $border-radius-big
+	border $border
+	background-color $color-background
+
+	&:not(:first-child)
+		margin-top $gap-small
+
+	&-head
+		display flex
+		justify-content space-between
+		align-items center
+
+	&-text
+		display flex
+		flex-direction column
+		justify-content flex-start
+		align-items flex-start
+
+	&-title
+		font-weight $bold
+		font-size 18px
+
+	&-description
+		font-size 14px
+		color $color-text-secondary
+
+	&-content
+		margin-top $gap
+
+	&-list
+		width 100%
+		display flex
+		flex-direction column
+
+		&:not(:first-child)
+			margin-top $gap-small
+
+	&-toggle, &-button
+		transition-mixin(color, transform)
+
+		&:hover
+			color $color-ui
+
+	&-toggle._open
+		transform rotate(180deg)
+
+	&-buttons
+		display flex
+		justify-content flex-end
+		align-items center
+		row-gap $gap-small
+		column-gap $gap-small
+
+	&-button
+		flex-center()
+		height 30px
+		min-width 30px
+		max-width 30px
+		border-radius $border-radius-circle
+		border $border
+		transition transform $transition
+
+		&._open
+			transform rotate(180deg)
+
+	&._disabled
+		& .ui-checkbox__wrapper,
+		& .ui-input-number,
+		& .ui-date-picker,
+		& .ui-checkbox,
+		& .ui-select,
+		& .ui-slider,
+		& .ui-button,
+		& .ui-input,
+		& .ui-radio
+			pointer-events none
+			opacity $opacity-disabled
+
+			& input
+				background-color transparent
+
+		& .ant-input-affix-wrapper, & .ant-input-number, & .ui-select .ant-select-selector, & .ui-date-picker .ant-picker
+			background-color $color-background-disabled
+
+	&._disabled &-head > *:nth-child(2)
+		pointer-events none
+		opacity $opacity-disabled
+
+	&._loading
+		loading-fields()
+
+	&._withoutTitle &-content
+		margin-top 0

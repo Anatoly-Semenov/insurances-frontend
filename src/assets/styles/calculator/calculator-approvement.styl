@@ -1,0 +1,60 @@
+.calculator__approvement
+	&, &-insurance
+		display flex
+		flex-direction column
+		width 100%
+
+	&-insurance
+		pointer-events none
+
+		&:not(:first-child)
+			margin-top $gap
+			padding-top $gap
+			border-top $border
+
+	&-subtitle
+		font-size 14px
+		font-weight $bold
+
+	&-empty
+		font-size 14px
+		margin auto
+
+	&-close
+		margin-top $gap
+
+	&-buttons
+		display flex
+		flex-direction column
+		width 100%
+
+		& > *
+			width 100%
+			margin-top $gap
+
+	&-fields
+		width 100%
+		display flex
+		row-gap $gap-small
+		column-gap $gap-small
+		flex-wrap wrap
+		margin-top $gap
+
+		& .ui-input
+			width 48%
+
+	&-modal
+		&._disabled
+			& .ui-input, & .ui-input-number, & .ui-select, & .ui-date-picker, & .ui-checkbox__wrapper, & .ui-slider, & .ui-checkbox
+				pointer-events none
+				opacity $opacity-disabled
+
+				& input
+					background-color transparent
+
+				& .ant-input-affix-wrapper, & .ant-input-number, & .ui-select .ant-select-selector, & .ui-date-picker .ant-picker
+					background-color $color-background-disabled
+
+		&._loading .ant-modal-footer .ant-btn-primary
+			opacity $opacity-disabled
+			pointer-events none

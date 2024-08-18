@@ -1,0 +1,26 @@
+.calculator__kasco
+	display flex
+	flex-wrap wrap
+	row-gap $gap-small
+	column-gap $gap-small
+	max-width 100%
+
+	& > .ui-select, & > .ui-input, & > .ui-input-number, & > .ui-date-picker
+		max-width 32%
+
+	&-list
+		width 100%
+		display flex
+		flex-direction column
+
+		& > .ui-checkbox
+			padding-top $gap-small
+			margin-left 0
+
+	&-ops
+		margin-top $gap-small
+		width 32%
+
+	&-alert
+		height 32px
+		width 100%

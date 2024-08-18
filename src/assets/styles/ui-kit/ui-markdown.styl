@@ -1,0 +1,23 @@
+.ui-markdown
+	& h3
+		font-weight $bold
+		font-size 15px
+
+		&:first-child
+			color $color-text-third
+
+		&:not(:first-child)
+			color $color-ui-active
+
+	& > *:not(:first-child)
+		margin-top $gap-medium
+
+	& ul
+		margin-left $gap-small
+
+		& li
+			color $color-text-secondary
+			font-size 13px
+
+			&:not(:first-child)
+				margin-top $gap-extra-small

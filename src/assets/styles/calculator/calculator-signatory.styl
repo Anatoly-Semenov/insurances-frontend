@@ -1,0 +1,55 @@
+.calculator__signatory
+	max-width 930px
+
+	&, &-fields, &-additional
+		display flex
+		flex-wrap wrap
+		row-gap $gap-small
+		column-gap $gap-small
+
+		& .ui-input,
+		& .ui-select,
+		& .ui-date-picker
+			max-width 31%
+
+	& &-long.ui-input
+		max-width 59%
+		min-width 440px
+
+	&-passport
+		display flex
+		flex-direction column
+		justify-content flex-start
+		align-items flex-start
+		width 100%
+
+		& > .ui-select
+			width 31%
+
+	&-fields
+		margin-top $gap
+		width 100%
+
+	&-reason
+		display flex
+		flex-wrap wrap
+		row-gap $gap-small
+		column-gap $gap-small
+		max-width 65%
+		width 100%
+
+		& .ui-input
+			max-width 49%
+
+		& .ui-date-picker
+			max-width 49%
+
+	&-additional
+		&:not(:first-child)
+			width 100%
+			border-top $border
+			padding-top $gap
+			margin-top $gap-extra-small
+
+		& .ui-input:not(.calculator__signatory-long)
+			min-width 290px

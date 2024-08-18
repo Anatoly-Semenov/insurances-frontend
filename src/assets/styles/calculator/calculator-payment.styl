@@ -1,0 +1,43 @@
+.calculator__payment
+	display flex
+	flex-wrap wrap
+	row-gap $gap-small
+	column-gap $gap-small
+	max-width 650px
+
+	& .ui-input-number, & .ui-date-picker, &-cv
+		max-width 48%
+
+	&-cv
+		flex-center()
+		width 100%
+
+		& .ui-input-number
+			width 140px
+			margin-left $gap-small
+
+	&-popover
+		flex-center()
+		row-gap $gap-small
+		column-gap $gap-small
+
+	&-months
+		flex-center()
+		width 100%
+		margin-top $gap-small
+		margin-bottom $gap-small
+		padding-top $gap-small
+		padding-bottom $gap-small
+		border-bottom $border
+		border-top $border
+
+		& .ui-input-number
+			width 140px
+			margin-left $gap-small
+
+	&._full
+		min-width 100%
+		max-width 100%
+
+	&._full &-months
+		width calc(100% - 24px)

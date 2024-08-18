@@ -1,0 +1,81 @@
+.calculator__results
+	width 100%
+	display flex
+	justify-content flex-start
+	align-items flex-start
+	flex-wrap wrap
+	row-gap $gap
+	column-gap $gap
+
+	&-item
+		display flex
+		flex-direction column
+		width calc(50% - 22px)
+
+		&:not(:last-child)
+			border-right $border
+			padding-right $gap
+
+	&-title
+		font-weight $bold
+		font-size 14px
+
+	&-link
+		padding-left 0
+		width fit-content
+
+		& > span
+			text-decoration underline
+
+	&-list
+		margin-top $gap-small
+
+		&._long
+			margin-top 44px
+
+		& .ui-alert
+			margin-top $gap-small
+
+	&-block
+		display flex
+		justify-content flex-start
+		align-items flex-start
+		padding $gap-medium
+		border-radius $border-radius
+		border $border
+		transition-mixin(border-color, opacity)
+
+		&:not(:first-child)
+			margin-top $gap-small
+
+		&._selected
+			border-color $color-ui-hover
+
+		&._disabled
+			opacity $opacity-disabled
+
+			& .ui-checkbox
+				pointer-events none
+
+		&._calculated .ant-input-number-input
+			color $color-text
+			opacity 1
+
+	&-logo
+		max-width 130px
+		pointer-events none
+
+	&-info, &-intro
+		width 100%
+
+	&-info
+		display flex
+		margin-top $gap-medium
+
+		& > *:not(:first-child)
+			margin-left $gap-medium
+
+	&-intro
+		display flex
+		flex-direction column
+		margin-left $gap

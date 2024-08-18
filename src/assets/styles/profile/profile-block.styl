@@ -1,0 +1,41 @@
+.profile__block
+	display flex
+	flex-direction column
+	padding $gap
+	border-radius $border-radius-big
+	border $border
+	background-color $color-background
+	width 100%
+
+	&:not(:first-child)
+		margin-top $gap-small
+
+	&-head
+		display flex
+		justify-content flex-start
+		align-items flex-start
+		flex-direction column
+
+	&-title
+		font-weight $bold
+		font-size 18px
+
+	&-subtitle
+		font-weight $regular
+		font-size 18px
+		color $color-text-secondary
+
+	&-description
+		font-size 14px
+		color $color-text-secondary
+		margin-top $gap-small
+
+	&-content
+		display flex
+		flex-wrap wrap
+		row-gap $gap
+		column-gap $gap
+		margin-top $gap
+
+		& .ui-input, .ui-select
+			width 31.5%

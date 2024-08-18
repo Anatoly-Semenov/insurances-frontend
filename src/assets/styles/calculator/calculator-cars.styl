@@ -1,0 +1,139 @@
+.calculator__cars
+	margin-top $gap
+	position relative
+
+	&._fullscreen
+		position fixed
+		top 76px
+		left 0
+		width 100vw
+		height calc(100vh - 76px)
+		z-index 3
+		margin-top 0
+		background-color $color-background
+		transition all .5s ease
+		overflow-y auto
+		custom-scrollbar()
+
+	&._fullscreen	&-block
+		border-top-left-radius 0
+		border-top-right-radius 0
+
+	&, &-container
+		display flex
+		flex-direction column
+		justify-content flex-start
+		align-items flex-start
+		width 100%
+
+	&-block
+		width 100%
+		border-bottom-left-radius 0
+		border-bottom-right-radius 0
+
+	&-head
+		display flex
+		justify-content flex-end
+		align-items center
+
+	&-subtitle
+		font-size 13px
+
+	&-actions
+		display flex
+		margin-top $gap-small
+
+		& > *:not(:first-child)
+			margin-left $gap-small
+
+	&-table
+		& .ant-table
+			&-content
+				custom-scrollbar()
+
+			&-thead
+				& > tr > th
+					background-color $color-background
+					font-size 14px
+
+				& > tr:first-child > th:first-child
+					border-left $border
+					border-top-left-radius 0 !important
+
+				& > tr:first-child > th:last-child
+					border-right $border
+					border-top-right-radius 0 !important
+
+			&-tbody > tr:first-child
+				display none
+
+	&-data
+		display flex
+		margin-top $gap-medium
+		margin-left $gap-medium
+
+		& > *:not(:first-child)
+			margin-left $gap-big
+
+		&-item
+			display flex
+			justify-content flex-start
+			align-items center
+			min-width 400px
+			max-width 400px
+			margin-top 5px
+
+		& .ant-timeline
+			&-item
+				padding-bottom $gap-extra-small
+
+			&-item-last > .ant-timeline-item-content
+				min-height 20px
+
+	&-param, &-value
+		font-size 13px
+
+	&-param
+		width 100%
+		list-style-position inside
+		white-space nowrap
+		overflow hidden
+		text-overflow ellipsis
+
+		&:after
+			content ""
+			display inline-block
+			width 100%
+			margin 0 -99% 0 10px
+			vertical-align baseline
+			border-bottom 1px dashed
+
+	&-value
+		color $color-text-secondary
+		margin-left $gap-extra-small
+		min-width fit-content
+
+	&-action
+		height 35px
+		width 35px
+		border 1px solid $color-ui
+		color $color-ui
+		border-radius $border-radius-circle
+		transition background-color $transition
+
+		&:hover
+			background-color $color-success-hover-background
+
+		&._delete
+			color $color-error
+			border-color $color-error
+
+			&:hover
+				background-color $color-error-hover-background
+
+		&:not(:first-child)
+			margin-left $gap-extra-small
+
+	&._loading
+		loading-fields()
+

@@ -1,0 +1,17 @@
+.slide-header-menu
+	&-enter-active
+		animation slide-header-menu .5s
+
+	&-leave-active
+		animation slide-header-menu reverse .6s
+
+@keyframes slide-header-menu
+	0%
+		transform translate(0, -42px)
+		opacity 0
+
+	100%
+		transform translate(0, 0px)
+		opacity 1
+
+

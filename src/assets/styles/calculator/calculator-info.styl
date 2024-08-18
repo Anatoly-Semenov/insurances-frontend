@@ -1,0 +1,58 @@
+.calculator__info
+	min-width 300px
+	max-width 300px
+	padding-left $gap-extra-small
+
+	&-content
+		width 300px
+		display flex
+		flex-direction column
+
+	& &-old
+		width 100%
+		border-color $color-error
+
+		& path
+			fill $color-error
+			transition fill $transition
+
+		&.ant-btn:hover
+			border-color $color-error-hover
+			color $color-error-hover
+
+			& path
+				fill $color-error-hover
+
+		&:active
+			border-color $color-error-active
+			color $color-error-active
+
+			& path
+				fill $color-error-active
+
+	&._fixed:not(._inversion) &-content
+		position fixed
+		top $gap-small
+
+	&-buttons
+		width 100%
+		display flex
+		flex-wrap wrap
+		row-gap $gap-extra-small
+		column-gap $gap-extra-small
+		margin-top $gap
+
+		& > .ui-button
+			min-width 33%
+
+			&._half
+				width 48%
+
+			&._long
+				width 100%
+
+	& > *:not(:first-child)
+		margin-top $gap-small
+
+	&._inversion .ui-alert
+		width calc(50% - 6px)

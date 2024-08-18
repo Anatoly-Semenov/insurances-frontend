@@ -1,0 +1,73 @@
+.profile
+	display flex
+	width 100%
+
+	&__main, &__intro
+		display flex
+		flex-direction column
+		justify-content flex-start
+		align-items flex-start
+
+	&__main
+		width 100%
+		margin-right $gap-small
+
+	&__intro
+		min-width 440px
+		max-width 440px
+
+	&__buttons
+		width 100%
+		display flex
+		justify-content flex-end
+		flex-wrap wrap
+		row-gap $gap-extra-small
+		column-gap $gap-extra-small
+		margin-top $gap-small
+
+	&._loading
+		& .ui-input, & .ui-input-number
+			pointer-events none
+
+			& .ant-input-affix-wrapper, & .ant-input-number
+				loading()
+
+			& .ant-input-number-group-addon
+				opacity 0
+
+			& input, &__title
+				background transparent
+
+			& input
+				color $color-text-disabled !important
+
+			&__title
+				color $color-text-disabled
+
+				&._top
+					background-color $color-background-disabled
+					border-radius $border-radius
+
+		& .ui-select
+			&__title
+				background-color $color-background-disabled
+				border-radius $border-radius
+				color $color-text-disabled
+
+			& .ant-select
+				&-selector
+					loading()
+
+				&-selection-item
+					color $color-text-disabled
+
+		& .ui-date-picker
+			pointer-events none
+
+			&__title
+				background-color $color-background-disabled
+				border-radius $border-radius
+				color $color-text-disabled
+
+			& .ant-picker
+				loading()

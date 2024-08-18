@@ -1,0 +1,101 @@
+.landing
+	&, &__content
+		display flex
+		flex-direction column
+		align-items flex-start
+		justify-content flex-start
+
+	&__title
+		font-size 18px
+		font-weight $bold
+
+	&__banner
+		display flex
+		justify-content space-between
+		align-items center
+		background linear-gradient(90deg, rgb(16, 65, 61) 0%, rgb(29, 106, 105) 100%)
+		width 100%
+		min-height 450px
+		border-radius 20px
+		padding 40px 60px
+		position relative
+
+		&:not(:first-child)
+			margin-top $gap
+
+		&-main
+			display flex
+			flex-direction column
+			align-items flex-start
+			justify-content center
+			max-width 50%
+
+		&-title
+			font-size 52px
+			font-weight $bold
+			color $color-background
+
+		&-description, &-advantages li
+			font-size 21px
+			font-weight $regular
+			margin-top $gap-extra-small
+			color #ffffffab
+			max-width 470px
+
+		&-advantages
+			margin-left 60px
+			margin-top $gap-extra-small
+
+			& li
+				font-size 16px
+				margin-top 2px
+
+			&._short
+				margin-left $gap
+
+		&-img
+			max-height 390px
+			position absolute
+			right 0
+			top auto
+			bottom auto
+
+		&-link
+			margin-top $gap-big
+
+			& .ui-button
+				padding 0 32px
+				height 52px
+
+	&__content
+		width 100%
+		margin-top $gap
+		padding $gap $gap-big
+		border-radius $border-radius-big
+		background-color $color-background
+
+		& > *:not(:first-child)
+			margin-top $gap
+
+	&__buttons
+		display flex
+		align-items center
+		justify-content flex-start
+		margin-top $gap
+		column-gap $gap
+		row-gap $gap
+
+	&__collapse
+		margin-top $gap-small
+
+	& .ant-tabs
+		margin-top $gap
+
+		&-tab
+			padding $gap-extra-small 36px
+
+		&-content
+			display none
+
+		&-nav
+			margin-bottom 0

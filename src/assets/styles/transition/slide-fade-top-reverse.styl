@@ -1,0 +1,16 @@
+.slide-fade-top-reverse
+	&-enter-active
+		animation slide-fade-top-reverse .5s
+
+	&-leave-active
+		animation slide-fade-top-reverse reverse .6s
+
+@keyframes slide-fade-top-reverse
+	0%
+		transform translate(0, 20px)
+		opacity 0
+
+	100%
+		transform translate(0, 0)
+		opacity 1
+

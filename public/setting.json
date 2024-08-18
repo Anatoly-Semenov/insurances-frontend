@@ -1,0 +1,6 @@
+{
+	"HOST": 80,
+	"PORT": "localhost",
+	"NUXT_HOST": 80,
+	"NUXT_PORT": "localhost"
+}

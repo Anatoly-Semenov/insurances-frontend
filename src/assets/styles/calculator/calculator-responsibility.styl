@@ -1,0 +1,33 @@
+.calculator__responsibility
+	display flex
+	row-gap $gap-small
+	column-gap $gap-small
+	max-width 100%
+
+	& > *:not(:last-child)
+		transition border $transition
+
+	&._border > *:not(:last-child)
+		border-right $border
+		padding-right $gap-small
+
+	&-go
+		display flex
+		flex-wrap wrap
+		align-content flex-start
+		row-gap $gap-small
+		column-gap $gap-small
+		width 50%
+
+	&-ppgo
+		display flex
+		flex-wrap wrap
+		align-content flex-start
+		row-gap $gap-small
+		column-gap $gap-small
+		max-width 50%
+
+	&-subtitle
+		width 100%
+		font-size 14px
+		font-weight $medium

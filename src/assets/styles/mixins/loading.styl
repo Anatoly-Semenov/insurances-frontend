@@ -1,0 +1,14 @@
+loading(colorStart = $color-loading, colorMiddle = $color-loading-secondary, colorEnd = $color-loading)
+	pointer-events none
+	background linear-gradient(90deg, colorStart 25%, colorMiddle 37%, colorEnd 64%)
+	background-size 400% 100%
+	animation ant-skeleton-loading 1.4s ease infinite
+	color transparent
+	border-radius $border-radius
+	user-select none
+
+	& > *
+		color transparent
+
+	& svg, & path
+		opacity 0

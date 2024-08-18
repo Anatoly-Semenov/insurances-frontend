@@ -1,0 +1,179 @@
+.calculator__asset
+	&:not(:first-child)
+		margin-top $gap-small
+
+	&-container
+		display flex
+		flex-direction column
+		row-gap $gap-small
+		column-gap $gap-small
+		max-width 100%
+		padding-bottom $gap-small
+
+		& .ui-input, .ui-select
+			max-width 100%
+
+	&-buttons
+		display flex
+		justify-content flex-end
+		align-items center
+		column-gap $gap-small
+
+	&-buttons &-delete
+		width 100%
+		border-color $color-error
+		color $color-text
+		height 30px
+		flex-center()
+
+		& path
+			fill $color-error
+			transition fill $transition
+
+		&.ant-btn:hover
+			border-color $color-error-hover
+			color $color-error-hover
+
+			& path
+				fill $color-error-hover
+
+		&:active
+			border-color $color-error-active
+			color $color-error-active
+
+			& path
+				fill $color-error-active
+
+	&-fields
+		display flex
+		flex-wrap wrap
+		row-gap $gap-small
+		column-gap $gap-small
+		width 100%
+
+		& .ui-input, .ui-select
+			max-width 48%
+
+	&-info
+		display flex
+		flex-direction column
+
+	&-factors, &-factors-list
+		width 100%
+		display flex
+		flex-direction column
+		margin-top $gap
+
+	&-factors
+		border-top $border
+		border-bottom $border
+		margin-left "calc(%s * -1)" % ($gap)
+		margin-right "calc(%s * -1)" % ($gap)
+		width "calc(100% + %s * 2)" % ($gap)
+		padding $gap-small $gap
+
+		&-row
+			width 100%
+			display flex
+			justify-content space-between
+			align-items center
+
+		&-toggle
+			flex-center()
+			height 30px
+			min-width 30px
+			max-width 30px
+			border-radius $border-radius-circle
+			border $border
+			transition transform $transition
+
+			&._open
+				transform rotate(180deg)
+
+		& .ui-checkbox
+			margin-left $gap-extra-small
+
+			&:not(:first-child)
+				padding-top $gap-small
+
+	&-subtitle
+		display flex
+		justify-content space-between
+		row-gap $gap-small
+		column-gap $gap-small
+		max-width 100%
+
+	&-action
+		width 100%
+		display flex
+		justify-content space-between
+		align-items center
+		margin-bottom "calc(%s * -1)" % ($gap)
+
+		&-container
+			display flex
+			justify-content flex-start
+			align-items center
+			row-gap $gap-small
+			column-gap $gap-small
+
+	&-table.ui-table
+		& .ant-table
+			&-content
+				custom-scrollbar()
+
+			&-thead
+				& > tr > th
+					background-color $color-background
+					font-size 12px
+
+				& > tr:first-child > th:first-child
+					border-left $border
+					border-top-left-radius 0 !important
+
+				& > tr:first-child > th:last-child
+					border-right $border
+					border-top-right-radius 0 !important
+
+			&-tbody > tr:first-child
+				display none
+
+	&-group
+		display flex
+		flex-direction column
+		justify-content flex-start
+		align-items flex-start
+		row-gap $gap-small
+		column-gap $gap-small
+		max-width 300px
+
+	&._open._openTable .calculator__block
+		border-bottom-left-radius 0
+		border-bottom-right-radius 0
+
+	&._fullscreen
+		position fixed
+		top 76px
+		left 0
+		width 100vw
+		height calc(100vh - 76px)
+		z-index 3
+		margin-top 0
+		background-color $color-background
+		transition all .5s ease
+		overflow-y auto
+		custom-scrollbar()
+
+	&._loadingDeal
+		loading-fields()
+
+		& .calculator__block-button,
+		& .calculator__block-title,
+		& .calculator__asset-factors-toggle,
+		& .calculator__asset-subtitle,
+		& .calculator__asset-action-container .ui-button,
+		& .calculator__asset-delete
+			loading()
+
+		& .calculator__asset-delete
+			border-color $color-border

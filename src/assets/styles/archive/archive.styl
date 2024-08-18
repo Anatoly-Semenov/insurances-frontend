@@ -1,0 +1,97 @@
+.archive
+	display flex
+	flex-direction column
+	justify-content flex-start
+	align-items flex-start
+	width 100%
+
+	&__title
+		display flex
+		justify-content flex-start
+		align-items center
+		font-size 24px
+		font-weight $bold
+
+		& a
+			color $color-text
+			margin-left 5px
+
+			&:hover
+				color $color-link-hover
+
+			&:active
+				color $color-link-active
+
+		& .anticon
+			margin-right $gap-small
+
+	&__main
+		display flex
+		flex-direction column
+		padding $gap
+		border-radius $border-radius-big $border-radius-big 26px 26px
+		border $border
+		background-color $color-background
+		margin-top $gap
+		width 100%
+
+		& > .ui-table
+			margin-top $gap
+
+		&-filter
+			display flex
+			justify-content flex-start
+			align-items center
+
+			& .ui-input
+				width 200px
+
+			& .ui-tabs
+				margin-left $gap
+
+				& .ant-tabs
+					&-nav-list
+						background-color $color-background-secondary
+
+					&-content-holder
+						display none
+
+					&-nav
+						margin-bottom 0
+
+	&__actions
+		flex-center()
+
+	&__action
+		height 35px
+		width 35px
+		border 1px solid $color-ui
+		color $color-ui
+		border-radius $border-radius-circle
+		transition background-color $transition
+
+		&:hover
+			background-color $color-success-hover-background
+
+		&._delete
+			color $color-error
+			border-color $color-error
+
+			&:hover
+				background-color $color-error-hover-background
+
+		&:not(:first-child)
+			margin-left $gap-extra-small
+
+	&._loading
+		& .ui-table
+			& p, & a, & button, & .ui-tag
+				loading()
+
+			& a
+				display flex
+				min-width 30px
+
+			& button
+				border none
+				border-radius $border-radius-circle

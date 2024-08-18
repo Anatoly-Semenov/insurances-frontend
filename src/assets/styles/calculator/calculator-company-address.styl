@@ -1,0 +1,22 @@
+.calculator__company-address
+	display flex
+	flex-wrap wrap
+	row-gap $gap-small
+	column-gap $gap-small
+	max-width 920px
+
+	& .ui-input, & .ui-select, & .ui-date-picker
+		max-width 31.6%
+
+	&-address
+		width 100%
+		display flex
+		flex-wrap wrap
+		row-gap $gap-small
+		column-gap $gap-small
+
+		& .ui-input
+			max-width 18%
+
+	& &-long.ui-input
+		max-width 64.5%
