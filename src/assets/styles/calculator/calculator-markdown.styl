@@ -1,0 +1,9 @@
+.calculator__markdown
+	&-toggle
+		transition-mixin(color, transform)
+
+		&:hover
+			color $color-ui
+
+		&._open
+			transform rotate(180deg)

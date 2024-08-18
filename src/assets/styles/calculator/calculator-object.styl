@@ -1,0 +1,29 @@
+.calculator__object
+	display flex
+	flex-wrap wrap
+	row-gap $gap
+	column-gap $gap
+	max-width 650px
+
+	& > .ui-select
+		max-width 48%
+
+	&-subtitle
+		margin-bottom -8px
+
+	&-description
+		display flex
+		flex-wrap wrap
+		row-gap $gap
+		column-gap $gap
+
+	&-list
+		max-width 90%
+		display flex
+		flex-direction column
+
+		& .ui-checkbox
+			margin-left $gap-extra-small
+
+			&:not(:first-child)
+				padding-top $gap-small

@@ -1,0 +1,134 @@
+.layout__header
+	display flex
+	flex-direction column
+	width 100%
+	position relative
+	z-index 2
+
+	&-gradient
+		height 6px
+		width 100%
+		background $gradient-main
+
+	&-main
+		display flex
+		justify-content flex-start
+		align-items center
+		height 100%
+		background-color $color-background
+
+	&-logo
+		display flex
+		justify-content flex-start
+		align-items center
+		height 100%
+		max-width 310px
+		transition opacity $transition
+		transform scale(0.7) translateX(-27px)
+		margin-left -28px
+
+		& img
+			max-height 40px
+			width 100%
+
+		&:hover
+			opacity $opacity-hover
+
+		&:active
+			opacity $opacity-hover
+
+	&-links
+		display flex
+		flex-wrap wrap
+		row-gap $gap-small
+		column-gap 0
+		margin-left "calc(%s * -1)" % ($gap)
+
+		& .ui-button.ant-btn-link
+			color $color-text
+			padding 4px 10px
+			font-size 13px
+
+			&:hover
+				color $color-ui-hover
+
+			&._active > span
+				border-bottom 2px solid $color-text
+				padding-bottom 9px
+				margin-top 2px
+
+			& .anticon-down
+				transition-mixin(transform, top)
+
+				& svg
+					height 10px
+					width 10px
+
+				&._active
+					transform rotate(180deg)
+					position relative
+					top -1px
+
+	&-profile
+		flex-center()
+		cursor pointer
+
+	&-profile > .ui-avatar
+		height 24px
+		width 24px
+
+	&-name
+		font-size 14px
+		margin-right $gap-extra-small
+
+	&-info
+		border-bottom $border
+		background-color $color-background
+		position relative
+		z-index 2
+
+		& > .layout__container
+			flex-direction row
+			justify-content space-between
+			align-items center
+			height 40px
+
+	&-insurances
+		background-color $color-background
+		position relative
+		z-index 1
+
+		&, & > .layout__container
+			min-height 49px
+
+		& > .layout__container
+			display flex
+			flex-direction row
+			flex-wrap wrap
+			row-gap $gap-big
+			column-gap $gap-big
+
+	&-insurance
+		display flex
+		align-items center
+		transition opacity $transition
+
+		&:hover
+			opacity $opacity-hover
+
+		&:active
+			opacity $opacity-active
+
+	&-icon
+		color $color-text
+		padding-right $gap-extra-small
+
+		& svg
+			height 16px
+			width 16px
+
+	&-title
+		color $color-text
+		font-weight $bold
+		font-size 14px
+

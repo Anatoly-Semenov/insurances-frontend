@@ -1,0 +1,53 @@
+loading-fields()
+	& .ui-input, & .ui-input-number
+		pointer-events none
+
+		& .ant-input-affix-wrapper, & .ant-input-number
+			loading()
+
+		& .ant-input-number-group-addon
+			opacity 0
+
+		& input, &__title
+			background transparent
+
+		& input
+			color $color-text-disabled !important
+
+		&__title
+			color $color-text-disabled
+
+			&._top
+				background-color $color-background-disabled
+				border-radius $border-radius
+
+	& .ui-select
+		&__title
+			background-color $color-background-disabled
+			border-radius $border-radius
+			color $color-text-disabled
+
+		& .ant-select
+			&-selector
+				loading()
+
+			&-selection-item
+				color $color-text-disabled
+
+	& .ui-date-picker
+		pointer-events none
+
+		&__title
+			background-color $color-background-disabled
+			border-radius $border-radius
+			color $color-text-disabled
+
+		& .ant-picker
+			loading()
+
+	& .ui-checkbox, & .ui-checkbox__wrapper
+		pointer-events none
+
+	& .ui-slider, & .ui-checkbox, & .ui-checkbox__wrapper
+		pointer-events none
+		opacity $opacity-disabled

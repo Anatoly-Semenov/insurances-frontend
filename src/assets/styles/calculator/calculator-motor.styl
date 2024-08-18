@@ -1,0 +1,24 @@
+.calculator__motor
+	display flex
+	flex-wrap wrap
+	row-gap $gap
+	column-gap $gap
+	max-width 100%
+
+	& .ui-input, & .ui-date-picker, & .ui-select
+		max-width 31%
+
+	&-description
+		display flex
+		flex-wrap wrap
+		row-gap $gap
+		column-gap $gap
+
+	&-list
+		max-width 70%
+		display flex
+		flex-direction column
+
+		& .ui-checkbox
+			padding-top $gap-small
+			margin-left $gap-extra-small

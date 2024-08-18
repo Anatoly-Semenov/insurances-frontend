@@ -1,0 +1,56 @@
+.calculator__summary
+	max-width 100%
+	row-gap $gap
+	column-gap $gap
+
+	&, &-risks, &-pledge
+		display flex
+		flex-direction column
+
+	&-risks, &-pledge
+		row-gap $gap-small
+		column-gap $gap-small
+
+	& .ui-input, & .ui-input-number, & .ui-date-picker, & .ui-select
+		max-width 31%
+
+	&-title
+		font-weight $medium
+
+	&-title, &-name
+		font-size 15px
+
+	&-fields
+		display flex
+		flex-direction column
+		row-gap $gap-small
+		width 100%
+		max-width 640px
+
+	&-field
+		display flex
+		justify-content space-between
+		align-items center
+
+		& .ui-input-number
+			max-width 100px
+
+	&-additional
+		width 100%
+		display flex
+		justify-content space-between
+		align-items flex-start
+		padding-top $gap
+		border-top $border
+
+	&-risks, &-pledge
+		max-width 49%
+		min-width 49%
+
+		& .ui-input-number,
+		& .ui-select
+			max-width 300px
+
+	&-risks
+		& .ui-checkbox
+			margin-left 0

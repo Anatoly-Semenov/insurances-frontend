@@ -1,0 +1,87 @@
+.calculator-cars__detail
+	& .ant-drawer-body
+		background-color $color-background-main
+
+	&-content
+		display flex
+		flex-direction column
+		justify-content flex-start
+		align-items flex-start
+
+		& > *:not(:first-child)
+			margin-top $gap
+
+		& .calculator__block
+			width 100%
+
+			&-content > hr
+				margin-top $gap
+
+	&-img
+		max-width 30%
+		max-height 200px
+		user-select none
+		pointer-events none
+
+	&-list
+		display flex
+		flex-wrap wrap
+		row-gap $gap-small
+		column-gap $gap-small
+		width 100%
+
+		&:not(:first-child)
+			margin-top $gap-small
+
+	&-subtitle
+		font-size 13px
+		font-weight $medium
+		color $color-text
+		margin-top $gap
+
+	&-buttons
+		display flex
+		justify-content flex-end
+		align-items center
+
+		& > *:not(:first-child)
+			margin-left $gap-small
+
+	& .ui-input, & .ui-select, & .ui-date-picker, & .ui-checkbox, &-row, &-empty
+		max-width 30.6%
+		min-width 30.6%
+
+	&-main
+		display flex
+		justify-content flex-start
+		align-items flex-start
+		width 100%
+
+	&-info
+		display flex
+		flex-wrap wrap
+		row-gap $gap-small
+		column-gap $gap-small
+		width 100%
+		margin-left $gap
+
+		& .ui-input, & .ui-select, & .ui-date-picker, & .ui-checkbox
+			max-width 270px
+			min-width 270px
+
+	&-row
+		display flex
+		flex-direction column
+		margin-top -19px
+
+	&-row &-subtitle
+		margin-top 0
+		margin-bottom 3px
+
+	&-mark
+		font-size 12px
+
+	&-trailer
+		width 160px
+		margin-left -105px
+		margin-right 105px

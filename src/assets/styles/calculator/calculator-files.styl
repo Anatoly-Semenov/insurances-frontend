@@ -1,0 +1,54 @@
+.calculator__files
+	display flex
+	flex-direction column
+	justify-content flex-start
+	align-items flex-start
+
+	&-name
+		font-size 14px
+		max-width 400px
+
+	&-egrp
+		width 465px
+		margin-top 11px
+
+	&-table
+		margin-top $gap
+
+	&-required
+		color $color-error
+
+	&-upload
+		display flex
+		flex-direction column
+		justify-content flex-start
+		align-items flex-start
+		margin-left auto
+		margin-right auto
+		width fit-content
+
+	&-file
+		color $color-text
+		font-size 14px
+		max-width 190px
+		text-align left
+
+	&-delete
+		height 35px
+		width 35px
+		border 1px solid $color-ui
+		border-radius $border-radius-circle
+		color $color-error
+		border-color $color-error
+		transition background-color $transition
+		margin-right $gap
+
+		&:hover
+			background-color $color-error-hover-background
+
+	&-hidden-input
+		height 0
+		overflow hidden
+		padding 0
+		margin 0
+		opacity 0

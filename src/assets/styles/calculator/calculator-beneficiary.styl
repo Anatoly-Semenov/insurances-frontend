@@ -1,0 +1,38 @@
+.calculator__beneficiary
+	flex-direction column
+	max-width 930px
+
+	&, &-row, &-credit
+		display flex
+		row-gap $gap-small
+		column-gap $gap-small
+
+	& .ui-input, & .ui-select
+		max-width 30%
+
+	&-credits
+		& .calculator__block-title
+			font-size 16px
+			font-weight $medium
+
+	&-credit
+		justify-content flex-start
+		align-items center
+
+		&:not(:first-child)
+			margin-top $gap-small
+
+	&-delete
+		height 35px
+		min-width 35px
+		border 1px solid $color-ui
+		border-radius $border-radius-circle
+		color $color-error
+		border-color $color-error
+		transition background-color $transition
+
+		&:hover
+			background-color $color-error-hover-background
+
+	&-add
+		margin-top $gap-small

@@ -1,0 +1,47 @@
+.profile__avatar
+	&, &-file
+		display flex
+		flex-direction column
+		justify-content flex-start
+		align-items flex-start
+
+	&-main
+		width 100%
+
+		& > .ui-avatar
+			height 64px
+			width 64px
+
+	&-main, &-upload
+		display flex
+		align-items center
+		justify-content flex-start
+
+	&-file
+		margin-left $gap
+
+	&-upload > span
+		color $color-text
+		font-size 12px
+		margin-left $gap-small
+
+	&-warn
+		margin-top $gap-extra-small
+		color $color-text-disabled
+		font-size 12px
+
+	&-delete.ui-button
+		margin-top $gap-small
+		color $color-error
+		border-color $color-error
+
+		&, &:hover, &:active
+			background-color transparent
+
+		&:hover
+			color $color-error-hover
+			border-color $color-error-hover
+
+		&:active, &:focus
+			color $color-error-active
+			border-color $color-error-active

@@ -1,0 +1,120 @@
+.calculator
+	display flex
+	justify-content flex-start
+	align-items flex-start
+	width 100%
+
+	&__main
+		width 100%
+		max-width 994px
+		display flex
+		flex-direction column
+
+	&__head
+		display flex
+		justify-content space-between
+		align-items center
+		width 100%
+
+		&-title
+			display flex
+			justify-content flex-start
+			align-items center
+			font-size 24px
+			font-weight $bold
+
+			& .anticon
+				margin-right $gap-small
+
+	&__content, &__head
+		padding-right $gap-extra-small
+
+	&__content
+		margin-top $gap
+
+	&__head
+		&-main
+			display flex
+			justify-content flex-start
+			align-items center
+
+		& .ui-tabs
+			margin-left $gap
+
+			& .ant-tabs-content-holder
+				display none
+
+			& .ant-tabs-nav
+				margin-bottom 0
+
+		&-buttons
+			display flex
+			justify-content flex-end
+			align-items center
+
+	&._inversion
+		flex-direction column-reverse
+
+	&._inversion &__info
+		min-width 100%
+		max-width 100%
+		margin-bottom $gap
+
+		&-content
+			flex-direction row
+			row-gap $gap-small
+			column-gap $gap-small
+			width 100%
+
+	&__error
+		width 100%
+		margin-bottom $gap
+
+	&._inversion &__info-content &__block
+		min-width 300px
+		width 100%
+		margin-top 0
+
+	&._inversion &__main
+		min-width 100%
+
+	&._error &__info-buttons,
+	&._error &__passport-add,
+	&._error &__block
+		pointer-events none
+		opacity $opacity-disabled
+
+	&._error &__head-title
+		color $color-error-hover
+
+	&._error .ant-radio-button-wrapper
+		&, &-checked
+			background-color $color-message-error-background
+			border-color $color-message-error-border
+
+	&._error &__block
+		border-color $color-error
+		background-color $color-error-hover-background
+
+		& .ui-input,
+		& .ui-select,
+		& .ui-date-picker,
+		& .ui-input-number,
+		& .ui-select._active._title
+			opacity $opacity-disabled
+
+			& input
+				background-color $color-message-error-background
+
+			& .ant-select .ant-select-selector,
+			& .ant-input-affix-wrapper,
+			& .ant-picker
+				border-color $color-error
+				background-color $color-message-error-background
+
+			&__title, .ui-select__title, &._disabled &__title
+				color $color-error
+				background-color $color-message-error-background
+
+		&-title
+			color $color-error

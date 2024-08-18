@@ -1,0 +1,50 @@
+.calculator__agro
+	display flex
+	row-gap $gap-small
+	column-gap $gap-small
+	max-width 100%
+
+	&-main
+		display flex
+		flex-wrap wrap
+		align-content flex-start
+		row-gap $gap-small
+		column-gap $gap-small
+		width 60%
+
+		& .ui-input, & .ui-select, & .ui-date-picker
+			max-width 48%
+
+	&-subject
+		display flex
+		flex-wrap wrap
+		align-content flex-start
+		row-gap $gap-small
+		column-gap $gap-small
+		margin-bottom 20px
+		margin-top 10px
+
+	&-alert
+		width fit-content
+		margin-top $gap-small
+
+	&-block
+		position relative
+
+		& .ui-alert
+			width fit-content
+
+	&-img
+		position absolute
+		top 10px
+		right 10px
+		max-height 170px
+		user-select none
+		pointer-events none
+		opacity .9
+		max-width 40%
+		transform scale(1.3) translate(-20px, 17px)
+
+
+	& .ui-alert
+		width fit-content

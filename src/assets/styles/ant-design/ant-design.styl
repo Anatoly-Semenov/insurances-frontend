@@ -1,0 +1,52 @@
+.ant-message-notice-content
+	border-radius $border-radius
+
+	&:has(.ant-message-error)
+		background $color-message-error-background
+		border 1px solid $color-message-error-border
+
+	&:has(.ant-message-success)
+		background-color $color-message-success-background
+		border 1px solid $color-message-success-border
+
+	&:has(.ant-message-warning)
+		background-color $color-message-warning-background
+		border 1px solid $color-message-warning-border
+
+	&:has(.ant-message-info)
+		background-color $color-message-info-background
+		border 1px solid $color-message-info-border
+
+.ant-popover
+	z-index 10000
+
+.ant-notification-notice
+	position relative
+	width 384px
+	max-width calc(100vw - 48px)
+	margin-bottom $gap
+	margin-inline-start auto
+	padding $gap
+	overflow hidden
+	line-height 1.6
+	word-wrap break-word
+	background $color-background
+	border-radius $border-radius
+	box-shadow $box-shadow-ant-notification
+
+	&:has(.ant-notification-notice-icon-error)
+		background $color-message-error-background
+		border 1px solid $color-message-error-border
+
+	&:has(.ant-notification-notice-icon-success)
+		background-color $color-message-success-background
+		border 1px solid $color-message-success-border
+
+	&:has(.ant-notification-notice-icon-warning)
+		background-color $color-message-warning-background
+		border 1px solid $color-message-warning-border
+
+	&:has(.ant-notification-notice-icon-info)
+		background-color $color-message-info-background
+		border 1px solid $color-message-info-border
+

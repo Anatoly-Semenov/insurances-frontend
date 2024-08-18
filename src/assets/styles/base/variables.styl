@@ -1,0 +1,146 @@
+// Переменные цветовой-палитры STYLUS
+$color-ui = var(--color-ui)
+$color-ui-hover = var(--color-ui-hover)
+$color-ui-active = var(--color-ui-active)
+$color-ui-shadow = var(--color-ui-shadow)
+$color-highlight = var(--color-highlight)
+$color-highlight-hover = var(--color-highlight-hover)
+$color-highlight-active = var(--color-highlight-active)
+$color-link = var(--color-link)
+$color-link-hover = var(--color-link-hover)
+$color-link-active = var(--color-link-active)
+$color-text = var(--color-text)
+$color-text-secondary = var(--color-text-secondary)
+$color-text-third = var(--color-text-third)
+$color-text-disabled = var(--color-text-disabled)
+$color-text-placeholder = var(--color-text-placeholder)
+$color-border = var(--color-border)
+$color-border-hover = var(--color-border-hover)
+$color-loading = var(--color-loading)
+$color-loading-secondary = var(--color-loading-secondary)
+$color-background = var(--color-background)
+$color-background-main = var(--color-background-main)
+$color-background-secondary = var(--color-background-secondary)
+$color-background-third = var(--color-background-third)
+$color-background-disabled = var(--color-background-disabled)
+$color-background-dark = var(--color-background-dark)
+$color-selection-text = var(--color-selection-text)
+$color-selection-background = var(--color-selection-background)
+$color-warning = var(--color-warning)
+$color-warning-hover = var(--color-warning-hover)
+$color-warning-active = var(--color-warning-active)
+$color-error = var(--color-error)
+$color-error-hover = var(--color-error-hover)
+$color-error-hover-background = var(--color-error-hover-background)
+$color-error-active = var(--color-error-active)
+$color-success = var(--color-success)
+$color-success-hover-background = var(--color-success-hover-background)
+$color-message-error-background = var(--color-message-error-background)
+$color-message-error-border = var(--color-message-error-border)
+$color-message-success-background = var(--color-message-success-background)
+$color-message-success-border = var(--color-message-success-border)
+$color-message-warning-background = var(--color-message-warning-background)
+$color-message-warning-border = var(--color-message-warning-border)
+$color-message-info-background = var(--color-message-info-background)
+$color-message-info-border = var(--color-message-info-border)
+
+// тени
+$box-shadow = 0px 12px 24px rgba(0, 0, 0, 0.06)
+$box-shadow-ui = 0 0 0 2px $color-ui-shadow
+$box-shadow-ant-notification = 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05)
+
+// Градиенты
+$gradient-ui = linear-gradient(110.36deg, rgba(250, 255, 242, 0.2) 8.46%, rgba(247, 241, 255, 0.00625) 55.65%), $color-ui
+$gradient-highlight = linear-gradient(110.36deg, rgba(250, 255, 242, 0.2) 8.46%, rgba(247, 241, 255, 0.00625) 55.65%), $color-highlight
+$gradient-main = linear-gradient(90deg, #00D900 0%, #BFF500 64.06%, #FEFF00 97.92%)
+
+// Закругления
+$border-radius-small = 4px
+$border-radius = 8px
+$border-radius-big = 12px
+$border-radius-circle = 1000px
+
+// Обводка
+$border = 1px solid $color-border
+$border-dashed = 1px dashed $color-border
+$border-ui = 1px solid $color-ui
+
+// Отступы
+$gap-extra-small = 8px
+$gap-small = 12px
+$gap-medium = 16px
+$gap = 22px
+$gap-big = 30px
+
+// Шрифты
+$font-text = "Ubuntu"
+
+// Начертания
+$regular = 300
+$medium = 600
+$bold = 900
+
+// Переходы
+$transition-duration = 0.4s
+$transition = $transition-duration ease
+
+// Высота строки
+$line-height = 24px
+$line-height-small = 17px
+
+// Непрозрачность
+$opacity-hover = .7
+$opacity-disabled = .6
+$opacity-active = .5
+
+// Animations
+$animation-heart = heart 6s infinite linear
+
+// Переменные цветовой-палитры CSS
+:root
+	--color-ui #003B85
+	--color-ui-hover #003B85
+	--color-ui-active #003B85
+	--color-ui-shadow #003B852b
+	--color-highlight #41A354
+	--color-highlight-hover #41A354
+	--color-highlight-active #158F3B
+	--color-link var(--color-ui)
+	--color-link-hover var(--color-ui-hover)
+	--color-link-active var(--color-ui-active)
+	--color-text #333333
+	--color-text-secondary #878B90
+	--color-text-third #646464
+	--color-text-disabled #ABABAB
+	--color-text-placeholder #a5a5a5
+	--color-border #D9D9D9
+	--color-border-hover #EDEDED
+	--color-loading #F6F6F6
+	--color-loading-secondary #ECECEC
+	--color-background #FFFFFF
+	--color-background-main #F5F5F5
+	--color-background-secondary #F6F6F6
+	--color-background-third #333333
+	--color-background-disabled #f9f9f9
+	--color-background-dark #000000
+	--color-selection-text #38533D
+	--color-selection-background #8CC898
+	--color-warning #FCBD42
+	--color-warning-hover #FFD37C
+	--color-warning-active #FFD37C
+	--color-error #B63414
+	--color-error-hover #E97356
+	--color-error-hover-background #b6341517
+	--color-error-active #B63414
+	--color-success #50D1AA
+	--color-success-hover-background #138f2b0d
+	--color-message-error-background #fff2f0
+	--color-message-error-border #ffccc7
+	--color-message-success-background #f6ffed
+	--color-message-success-border #b7eb8f
+	--color-message-warning-background #fffbe6
+	--color-message-warning-border #ffe58f
+	--color-message-info-background #e6f4ff
+	--color-message-info-border #91caff
+	// Ant Design
+	--antd-wave-shadow-color var(--color-ui)

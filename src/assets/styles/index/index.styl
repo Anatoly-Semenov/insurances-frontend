@@ -1,0 +1,91 @@
+.index
+	display flex
+	flex-direction column
+	justify-content flex-start
+	align-items flex-start
+	width 1000px
+	height 100%
+	margin-left auto
+	margin-right auto
+	position relative
+	z-index 1
+
+	&__intro
+		width 100%
+		display flex
+		justify-content space-between
+		margin-top 70px
+		position relative
+
+		&-img
+			max-width 360px
+			position absolute
+			right 0
+			bottom -75px
+			z-index -1
+
+	&__info
+		display flex
+		flex-direction column
+		justify-content flex-start
+		align-items flex-start
+
+		&-logo
+			width 200px
+			transform scale(1.8) translate(45px, -5px)
+			margin-bottom -10px
+
+		&-title
+			font-size 55px
+			font-weight $bold
+
+		&-subtitle
+			font-size 16px
+			width 370px
+			line-height 22px
+			color $color-text-secondary
+			margin-top 18px
+
+		&-buttons
+			display flex
+			margin-top $gap
+
+			& .ui-button
+				height 40px
+				width 200px
+				font-size 12px
+
+				&:not(:first-child)
+					margin-left $gap-small
+
+	&__radial
+		position absolute
+		height 600px
+		width 600px
+		border-radius 525px
+		background radial-gradient(45.69% 45.69% at 54.86% 54.57%, #00a40030 0%, rgba(0,164,33,0.04) 100%)
+		filter blur(32px)
+		z-index -1
+
+		&._bottom
+			left -400px
+			bottom -400px
+			animation 3s infinite alternate heart
+
+		&._top
+			right -240px
+			top -70px
+			height 800px
+			width 800px
+			animation 5s infinite alternate heart
+
+		&._orange
+			background radial-gradient(45.69% 45.69% at 54.86% 54.57%, #f7680138 0%, rgba(0,164,33,0.04) 100%)
+
+	&__insurances
+		width 100%
+		display flex
+		flex-wrap wrap
+		row-gap $gap
+		column-gap $gap
+		margin-top 70px

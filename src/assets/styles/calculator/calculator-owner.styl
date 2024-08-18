@@ -1,0 +1,20 @@
+.calculator__owner
+	display flex
+	flex-wrap wrap
+	row-gap $gap-small
+	column-gap $gap-small
+	max-width 100%
+
+	& &-switch
+		margin-bottom: $gap-small
+
+	& &-wrap
+		display flex
+		flex-wrap wrap
+		row-gap $gap-small
+		column-gap $gap-small
+		max-width 100%
+		min-width 100%
+
+		& > .ui-select, & > .ui-input, & > .ui-date-picker
+			max-width 32%

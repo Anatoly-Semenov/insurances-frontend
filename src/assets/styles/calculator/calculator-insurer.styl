@@ -1,0 +1,19 @@
+.calculator__insurer
+	display flex
+	flex-wrap wrap
+	row-gap $gap-small
+	column-gap $gap-small
+	max-width 620px
+
+	& .ui-input, & .ui-select
+		max-width 48%
+		transition max-width $transition
+
+	& &-long.ui-input
+		max-width 100%
+
+	&._company
+		max-width 100%
+
+		& .ui-input, & .ui-select, & .ui-date-picker
+			max-width 31%

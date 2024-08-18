@@ -1,0 +1,90 @@
+.calculator__fertility
+	display flex
+	flex-direction column
+	position relative
+	margin-top $gap
+
+	&._empty
+		margin-bottom $gap
+
+	&._first
+		margin-top $gap
+
+	&._fullscreen
+		position fixed
+		top 76px
+		left 0
+		width 100vw
+		height calc(100vh - 76px)
+		z-index 3
+		margin-top 0
+		background-color $color-background
+		transition all .5s ease
+		overflow-y auto
+		custom-scrollbar()
+
+	&._fullscreen	&-block
+		border-top-left-radius 0
+		border-top-right-radius 0
+
+	&-container
+		display flex
+		flex-direction column
+		justify-content flex-start
+		align-items flex-start
+		width 100%
+
+	&-block
+		width 100%
+		border-bottom-left-radius $border-radius-big
+		border-bottom-right-radius $border-radius-big
+
+	&._open &-block
+		border-bottom-left-radius 0
+		border-bottom-right-radius 0
+
+		& .calculator__block-content
+			margin-top $gap-small
+
+	& .calculator__block-content
+		margin-top 0
+
+	&-head
+		display flex
+		justify-content flex-end
+		align-items center
+
+	&-delete
+		margin-left auto
+		margin-right auto
+
+		& path
+			fill $color-error
+			transition fill $transition
+
+		&:hover path
+			fill $color-error-hover
+
+		&:active path
+			fill $color-error-active
+
+	& .ui-table
+		& .ant-table
+			&-content
+				custom-scrollbar()
+
+			&-thead
+				& > tr > th
+					background-color $color-background
+					font-size 14px
+
+				& > tr:first-child > th:first-child
+					border-left $border
+					border-top-left-radius 0 !important
+
+				& > tr:first-child > th:last-child
+					border-right $border
+					border-top-right-radius 0 !important
+
+			&-tbody > tr:first-child
+				display none

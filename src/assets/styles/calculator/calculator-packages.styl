@@ -1,0 +1,59 @@
+.calculator__packages
+	display flex
+	flex-direction column
+
+	&-list
+		display flex
+		flex-wrap wrap
+		row-gap $gap-small
+		column-gap $gap-small
+
+	&-item
+		flex-center()
+		padding $gap-small
+		background-color $color-background
+		border $border
+		border-radius $border-radius-big
+		transition-mixin(border-color, background-color, box-shadow)
+
+		& svg
+			height 18px
+			width 18px
+			margin-right $gap-extra-small
+
+			& path
+				transition fill $transition
+
+		&._active
+			border-color $color-ui
+			background-color #F5FDF6
+			box-shadow $box-shadow-ui
+
+			& path
+				fill $color-ui
+
+	&-subtitle
+		font-weight $bold
+		font-size 16px
+		margin-bottom $gap-small
+
+	&-risks
+		display flex
+		flex-direction column
+		justify-content flex-start
+		align-items flex-start
+		background-color $color-background-secondary
+		border-radius $border-radius-big
+		padding $gap
+		margin-top $gap
+
+		&-list
+			margin-left $gap-medium
+
+	&-risk
+		font-size 14px
+		line-height 32px
+
+	&._disabled
+		opacity $opacity-disabled
+		pointer-events none

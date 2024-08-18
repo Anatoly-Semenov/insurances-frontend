@@ -1,0 +1,34 @@
+.calculator__assets
+	display flex
+	flex-direction column
+	width 100%
+
+	&-buttons, &-empty
+		display flex
+		flex-wrap wrap
+		row-gap $gap-small
+		column-gap $gap-small
+		padding $gap
+		border-radius $border-radius-big
+		border $border
+		background-color $color-background
+
+		&:not(:first-child)
+			margin-top $gap
+
+		& .ui-button
+			width fit-content
+
+	&-empty .ui-result
+		padding-top 0
+		padding-bottom 30px
+
+		& .ant-result
+			&-icon
+				margin-bottom 0
+
+				& svg
+					transform scale(0.8)
+
+			&-extra
+				margin-top $gap

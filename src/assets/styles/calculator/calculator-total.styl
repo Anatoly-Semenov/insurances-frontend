@@ -1,0 +1,41 @@
+.calculator__total
+	&-inversion
+		flex-center()
+		height 30px
+		width 30px
+		border-radius $border-radius-circle
+		border $border
+		transition opacity $transition
+
+		&:hover
+			opacity $opacity-disabled
+
+		&:active
+			opacity $opacity-active
+
+	&, &-list
+		display flex
+		flex-direction column
+
+	&-row
+		display flex
+		justify-content space-between
+		align-items center
+
+		&:not(:first-child)
+			margin-top $gap-small
+
+		&._separate
+			border-top $border
+			padding-top $gap-small
+
+	&-name
+		font-size 12px
+		color $color-text-disabled
+
+	&-value
+		font-size 14px
+		font-weight $medium
+
+	& .calculator__packages-item
+		margin-top $gap-medium

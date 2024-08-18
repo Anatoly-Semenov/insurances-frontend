@@ -1,0 +1,53 @@
+.index__insurance
+	display flex
+	flex-direction column
+	justify-content flex-start
+	align-items flex-start
+	background-color $color-background
+	border-radius $border-radius-big
+	padding $gap-medium
+	width 300px
+	cursor pointer
+
+	&-intro
+		display flex
+		justify-content flex-start
+		align-items center
+
+	&-title, &-icon
+		transition color .1s ease
+
+	&-icon
+		flex-center()
+		margin-right $gap-extra-small
+		min-width 18px
+
+		& svg
+			height 18px
+			width 18px
+
+	&-title
+		font-size 18px
+		font-weight $bold
+
+	&:hover &-title, &:hover &-icon
+		color $color-ui-hover
+
+	&-description, &-subjects
+		margin-top $gap-extra-small
+		margin-bottom $gap-extra-small
+
+	&-description
+		font-size 13px
+		color $color-text-secondary
+
+	&-subjects
+		margin-left 14px
+
+	&-buttons
+		display flex
+		justify-content flex-start
+		align-items center
+		margin-top auto
+		row-gap $gap-extra-small
+		column-gap $gap-extra-small

@@ -1,0 +1,15 @@
+@media screen and (max-width: 920px)
+	.calculator__results
+		&-item
+			width 100%
+
+			&:not(:last-child)
+				border-right none
+				padding-right 0
+
+			&:not(:first-child)
+				padding-top $gap-small
+				border-top $border
+
+		&-list._long
+			margin-top $gap-small
