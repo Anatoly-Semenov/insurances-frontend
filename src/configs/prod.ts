@@ -1,0 +1,21 @@
+export const prodConfig = {
+	GO_LANDING: "",
+	UNLEASH_URL: "https://www.test-url.ru/feature/proxy",
+	SECONDARY_FRONTEND_URL: "https://secondary.test-url.ru",
+	UNLEASH_CLIENT_KEY: "unleash-data-replication",
+	PORTAL_API_URL: "https://portal.test-url.ru",
+	EGRP_URL: "https://egrul.nalog.ru/index.html",
+	BASE_API_URL_SHORT: "https://www.test-url.ru",
+	BASE_API_URL: "https://www.test-url.ru/app",
+	OLD_FRONTEND_URL: "https://www.test-url.ru",
+	PREFFIX_MOTOR_ASSISTANT: "/motorAssistant",
+	UNLEASH_APP_NAME: "insurances-frontend",
+	CRM_URL: "https://crm.test-url.ru",
+	PREFFIX_DMSACCIDENT: "/dms-sogaz",
+	UNLEASH_ENVIRONMENT: "production",
+	PREFFIX_DMSSBS: "/Insurance-dms",
+	PREFFIX_ASSET: "/asset",
+	PREFFIX_AGRO: "/agro",
+	PREFFIX_MITE: "/mite",
+	ENVIRONMENT: "prod"
+}

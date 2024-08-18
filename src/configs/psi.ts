@@ -1,0 +1,21 @@
+export const psiConfig = {
+	GO_LANDING: "",
+	UNLEASH_URL: "https://unleash-proxy.staging.test-url.io/proxy",
+	SECONDARY_FRONTEND_URL: "https://secondary.staging.test-url.io",
+	BASE_API_URL_SHORT: "https://psiwww.test-url.ru",
+	OLD_FRONTEND_URL: "https://psiwww.test-url.ru",
+	BASE_API_URL: "https://psiwww.test-url.ru/app",
+	PORTAL_API_URL: "https://portal.test-url.ru",
+	EGRP_URL: "https://egrul.nalog.ru/index.html",
+	PREFFIX_MOTOR_ASSISTANT: "/motorAssistant",
+	CRM_URL: "https://staging-crm.test-url.ru",
+	UNLEASH_APP_NAME: "insurances-frontend",
+	UNLEASH_ENVIRONMENT: "production",
+	PREFFIX_DMSACCIDENT: "/dms-sogaz",
+	PREFFIX_DMSSBS: "/Insurance-dms",
+	UNLEASH_CLIENT_KEY: "test",
+	PREFFIX_ASSET: "/asset",
+	PREFFIX_AGRO: "/agro",
+	PREFFIX_MITE: "/mite",
+	ENVIRONMENT: "staging"
+}
